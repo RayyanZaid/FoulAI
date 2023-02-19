@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 """
 Django settings for BasketballFoulAI project.
 
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5k2q_5-@!bsy(2^z1g8c7nvw@w@h(hd#dx!lwq$r5rvj6!5(74'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
